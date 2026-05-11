@@ -16,63 +16,57 @@
 
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
-    h1 { font-size: 3.5rem; margin-bottom: 10px; }
-    .subtitle { font-size: 1.4rem; opacity: 0.9; }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+    h1 { font-size: 3rem; margin-bottom: 10px; }
+    .subtitle { font-size: 1.3rem; opacity: 0.9; margin-bottom: 10px; }
 
     .section { padding: 60px 0; }
-    h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+    h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: #a5b4fc; }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: rgba(255,255,255,0.1);
-      padding: 25px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-    }
-
-    footer {
+    .about-text {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
       text-align: center;
-      padding: 40px;
-      opacity: 0.8;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
+      <img src="https://via.placeholder.com/180" alt="Sumit Kumar" class="profile-img">
+      
       <h1>Hi, I'm Sumit Kumar 👋</h1>
-      <p class="subtitle">Full Stack Developer | Web Enthusiast</p>
+      <p class="subtitle">BCA Student | Aspiring Web Developer</p>
     </header>
 
     <div class="section">
       <h2>About Me</h2>
-      <p style="text-align:center; font-size:1.2rem; max-width:700px; margin:0 auto;">
-        I am a passionate developer who loves creating beautiful and functional websites.
+      <p class="about-text">
+        I am a BCA student who is passionate about web development. 
+        Currently learning HTML, CSS, JavaScript and exploring full-stack development. 
+        I enjoy building small projects and learning new things every day.
       </p>
     </div>
 
     <div class="section">
       <h2>My Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>Project 1</h3>
-          <p>Personal Portfolio Website</p>
-        </div>
-        <div class="card">
-          <h3>Project 2</h3>
-          <p>Coming Soon...</p>
-        </div>
-      </div>
+      <p style="text-align:center; font-size:1.3rem; opacity:0.9;">
+        I'm just getting started. More projects coming soon...
+      </p>
     </div>
 
-    <footer>
-      <p>Made with ❤️ by Sumit Kumar | Deployed on Vercel</p>
+    <footer style="text-align:center; padding:40px; opacity:0.8;">
+      <p>Made with ❤️ by Sumit Kumar</p>
     </footer>
   </div>
 </body>
