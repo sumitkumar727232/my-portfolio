@@ -1,89 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sumit Kumar | Portfolio</title>
 
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+
     *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
     body{
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: white;
-      line-height: 1.6;
+      font-family:'Poppins', sans-serif;
+      background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+      color:white;
+      overflow-x:hidden;
     }
 
     .container{
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
+      width:90%;
+      max-width:1100px;
+      margin:auto;
     }
 
     header{
-      text-align: center;
-      padding: 60px 20px;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:20px;
     }
 
     .profile-img{
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 5px solid white;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      width:190px;
+      height:190px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid white;
+      box-shadow:0 0 25px rgba(255,255,255,0.3);
+      margin-bottom:25px;
+      transition:0.4s;
+    }
+
+    .profile-img:hover{
+      transform:scale(1.05);
     }
 
     h1{
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size:4rem;
+      margin-bottom:10px;
+    }
+
+    .highlight{
+      color:#a5b4fc;
     }
 
     .subtitle{
-      font-size: 1.3rem;
-      opacity: 0.9;
+      font-size:1.3rem;
+      opacity:0.9;
+      margin-bottom:25px;
     }
 
-    .section{
-      padding: 60px 0;
+    .btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:#a5b4fc;
+      color:black;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:80px 0;
     }
 
     h2{
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      color: #a5b4fc;
+      text-align:center;
+      font-size:3rem;
+      margin-bottom:40px;
+      color:#c7d2fe;
     }
 
-    .about-text{
-      max-width: 750px;
-      margin: auto;
-      text-align: center;
-      font-size: 1.2rem;
+    .about-box{
+      background:rgba(255,255,255,0.08);
+      padding:35px;
+      border-radius:20px;
+      backdrop-filter:blur(10px);
+      text-align:center;
+      line-height:1.9;
+      font-size:1.1rem;
+      box-shadow:0 0 20px rgba(255,255,255,0.05);
     }
 
-    .project-box{
-      background: rgba(255,255,255,0.1);
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      max-width: 500px;
-      margin: auto;
-      backdrop-filter: blur(10px);
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .skill{
+      background:rgba(255,255,255,0.08);
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,0.15);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .project-card{
+      background:rgba(255,255,255,0.08);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+      backdrop-filter:blur(10px);
+    }
+
+    .project-card:hover{
+      transform:translateY(-8px);
+      background:rgba(255,255,255,0.12);
+    }
+
+    .project-card h3{
+      margin-bottom:15px;
+      color:#c7d2fe;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin-bottom:25px;
+      font-size:1.1rem;
+    }
+
+    .socials{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:20px;
+    }
+
+    .socials img{
+      width:55px;
+      transition:0.3s;
+      filter:drop-shadow(0 0 10px rgba(255,255,255,0.4));
+    }
+
+    .socials img:hover{
+      transform:scale(1.15);
     }
 
     footer{
-      text-align: center;
-      padding: 40px;
-      opacity: 0.8;
+      text-align:center;
+      padding:30px;
+      opacity:0.8;
+      border-top:1px solid rgba(255,255,255,0.1);
+      margin-top:40px;
     }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:2.8rem;
+      }
+
+      h2{
+        font-size:2.2rem;
+      }
+
+      .subtitle{
+        font-size:1.1rem;
+      }
+
+      .profile-img{
+        width:160px;
+        height:160px;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
@@ -92,53 +222,53 @@
 
     <header>
 
-      <!-- PROFILE IMAGE -->
       <img src="Sumit.jpg" alt="Sumit Kumar" class="profile-img">
 
-      <h1>Hi, I'm Sumit Kumar 👋</h1>
+      <h1>
+        Hi, I'm <span class="highlight">Sumit Kumar</span> 👋
+      </h1>
 
       <p class="subtitle">
-        BCA Student | Aspiring Web Developer
+        BCA Student | Beginner Web Learner
       </p>
 
     </header>
 
-    <!-- ABOUT SECTION -->
-    <section class="section">
+    <section>
 
       <h2>About Me</h2>
 
-      <p class="about-text">
-        I am a BCA student who is passionate about web development.
-        Currently learning HTML, CSS and JavaScript.
-        I enjoy creating websites and learning new technologies every day.
-      </p>
-
-    </section>
-
-    <!-- PROJECT SECTION -->
-    <section class="section">
-
-      <h2>My Projects</h2>
-
-      <div class="project-box">
-
-        <h3>Portfolio Website</h3>
+      <div class="about-box">
 
         <p>
-          This is my personal portfolio website created using HTML and CSS.
+          I am a BCA student who is passionate about technology and learning web development.
+          Currently exploring HTML and basic website designing while improving my computer skills every day.
+          I also enjoy creating tech-related content and learning new digital tools.
         </p>
 
       </div>
 
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>Made with ❤️ by Sumit Kumar</p>
-    </footer>
+    <section>
+
+      <h2>My Skills</h2>
+
+      <div class="skills">
+
+        <div class="skill">HTML</div>
+        <div class="skill">MS OFFICE</div>
+        <div class="skill">Basic Web Design</div>
+        <div class="skill">Video Editing</div>
+        <div class="skill">Tech Content</div>
+        <div class="skill">Computer Basics</div>
+
+      </div>
+
+    </section>
 
   </div>
 
 </body>
+
 </html>
